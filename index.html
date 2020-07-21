@@ -1,0 +1,1360 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Doxak</title>
+<script type="text/javascript" src="jscolor.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="move.js"></script>
+<center>
+
+<div id="panel" style="margin-top:5px;font-size:12px;width:99%;text-align:center;display:none;background:#ebebeb;border:2px solid #cacaca;padding-top:10px;padding-bottom:10px;margin-bottom:5px;border-radius:5px;">
+
+
+<center>
+<div style="background:#cacaca;width:90%;border-radius:5px;padding:10px;padding-bottom:35px;">
+<button id="back" style="float:right;margin-right:10px;"
+>Background Setting</button>
+<button id="link" style="float:right;margin-right:10px;">Link settings</button>
+<button id="linkhover" style="float:right;margin-right:10px;"
+>Hover link settings</button>
+<button id="header" style="float:right;margin-right:10px;">header setting</button>
+<button id="menu" style="float:right;margin-right:10px;">menu setting</button>
+<button id="post" style="float:right;margin-right:10px;">conent area setting</button>
+<button id="soilder" style="float:right;margin-right:10px;">sidebar setting</button>
+<button id="title" style="float:right;margin-right:10px;">widget settings</button>
+<button id="info" style="float:right;margin-right:10px;">sidebar info</button>
+<button id="botttom" style="float:right;margin-right:10px;">post footer setting</button>
+<button id="code" style="float:right;margin-right:10px;">get code</button>
+</div>
+
+
+<div id="background" style="font-size:12px;width:100%;text-align:center;display:none;margin-top:10px;">
+<form id="ht" action="form_action.asp">
+text space
+<input type="number" min="0" max="2000" step="1" value="25">
+</form> 
+<hr>
+<form id="main" action="form_action.asp">Please enter the numbers followed by px or %<br>
+width page
+<input type="text" value="806px">
+</form> 
+<hr>
+<form id="fs" action="form_action.asp">
+size text font
+<input type="number" min="0" max="2000" step="1" value="16">
+</form> 
+<form id="fc" action="form_action.asp">
+text color
+<input type="color" value="#000">
+</form>
+<form id="ff" action="form_action.asp">
+text font
+<input type="text" value="tahoma">
+</form>  
+<form id="posy" action="form_action.asp">
+tex placement
+<select>
+<option type="checkbox" value="center" selected>center</option>
+<option type="checkbox" value="right">right</option>
+<option type="checkbox" value="left">left</option>
+</select>
+</form> 
+<form id="bc" action="form_action.asp">
+Background Color
+<input autocomplete="off" class="color" style="border: 1px solid gray; text-align: center; color: rgb(0, 0, 0); background-color: #efefef;" size="6" id="tc" name="rbgcolor" value="EFEFEF" type="text">
+</form> 
+<form id="bp" action="form_action.asp">
+address Background Photo
+<input type="text" value="">
+</form> 
+<form id="bg" action="form_action.asp">
+Background photo style
+<select>
+<option type="checkbox" value="no-repeat">No Repeat</option>
+<option type="checkbox" value="repeat" selected>Repeat</option>
+<option type="checkbox" value="repeat-y">repeat y</option>
+<option type="checkbox" value="repeat-x">repeat x</option>
+</select>
+</form> 
+<form id="bi1" action="form_action.asp">
+photo placement 1
+<select>
+<option type="checkbox" value="top">top</option>
+<option type="checkbox" value="bottom" selected>bottom</option>
+<option type="checkbox" value="center" selected>center</option>
+</select>
+</form> 
+<form id="bi2" action="form_action.asp">
+photo placement 2
+<select>
+<option type="checkbox" value="left">left</option>
+<option type="checkbox" value="right" selected>right</option>
+<option type="checkbox" value="center" selected>center</option>
+</select>
+</form>
+<form id="bpp" action="form_action.asp">
+Background Photo movement
+<select>
+<option type="checkbox" value="fixed" selected>fixed</option>
+<option type="checkbox" value="">flexible</option>
+</select>
+</form>
+</div>
+
+<div id="linkpart" style="font-size:12px;width:100%;text-align:center;display:none;margin-top:10px;">
+<form id="lfs" action="form_action.asp">
+size text font
+<input type="number" min="0" max="2000" step="1" value="14">
+</form> 
+<form id="lff" action="form_action.asp">
+text font
+<input type="text" value="tahoma">
+</form>  
+<form id="lc" action="form_action.asp">
+text color
+<input type="color" value="#b6b6b6">
+</form> 
+<form id="lbc" action="form_action.asp">
+Background Color
+<input type="color" value="#F7F7F7">
+</form> 
+<form id="lac" action="form_action.asp">
+Border color
+<input type="color" value="#cacaca">
+</form> 
+<form id="lam" action="form_action.asp">
+Border style
+<select>
+<option type="checkbox" value="solid" selected>Solid</option>
+<option type="checkbox" value="dashed">Dashed</option>
+<option type="checkbox" value="dotted">Dotted</option>
+<option type="checkbox" value="double">Double</option>
+</select>
+</form> 
+<form id="lcs" action="form_action.asp">
+Border thinkness
+<input type="number" min="0" max="50" step="1" value="1">
+</form> 
+<form id="lcc" action="form_action.asp">
+Border radius
+<input type="number" min="0" max="100" step="1" value="1">
+</form> 
+<form id="lp" action="form_action.asp">
+address Background Photo
+<input type="text" value="">
+</form> 
+<form id="lg" action="form_action.asp">
+Background photo style
+<select>
+<option type="checkbox" value="no-repeat">No Repeat</option>
+<option type="checkbox" value="repeat" selected>Repeat</option>
+</select>
+</form> 
+<form id="lsp" action="form_action.asp">
+Text space from borders
+<input type="number" min="0" max="50" step="1" value="5">
+</form> 
+<form id="lsm" action="form_action.asp">
+box space from outside
+<input type="number" min="0" max="50" step="1" value="1">
+</form> 
+<hr>
+<h5>link setting Menu</h5>
+<form id="mmlfs" action="form_action.asp">
+size text font
+<input type="number" min="0" max="2000" step="1" value="18">
+</form> 
+<form id="mmlff" action="form_action.asp">
+text font
+<input type="text" value="tahoma">
+</form>  
+<form id="mmlc" action="form_action.asp">
+text color
+<input type="color" value="#dedede">
+</form> 
+<form id="mmlbc" action="form_action.asp">
+Background Color
+<input type="color" value="#fcfcfc">
+</form> 
+<form id="mmlac" action="form_action.asp">
+Border color
+<input type="color" value="#f4f4f4">
+</form> 
+<form id="mmlam" action="form_action.asp">
+Border style
+<select>
+<option type="checkbox" value="solid" selected>Solid</option>
+<option type="checkbox" value="dashed">Dashed</option>
+<option type="checkbox" value="dotted">Dotted</option>
+<option type="checkbox" value="double">Double</option>
+</select>
+</form> 
+<form id="mmlcs" action="form_action.asp">
+Border thinkness
+<input type="number" min="0" max="50" step="1" value="1">
+</form> 
+<form id="mmlcc" action="form_action.asp">
+Border radius
+<input type="number" min="0" max="100" step="1" value="2">
+</form> 
+<form id="mmlp" action="form_action.asp">
+address Background Photo
+<input type="text" value="">
+</form> 
+<form id="mmlg" action="form_action.asp">
+Background photo style
+<select>
+<option type="checkbox" value="no-repeat">No Repeat</option>
+<option type="checkbox" value="repeat" selected>Repeat</option>
+</select>
+</form> 
+<form id="mmlsp" action="form_action.asp">
+Text space from borders
+<input type="number" min="0" max="50" step="1" value="5">
+</form> 
+<form id="mmlsm" action="form_action.asp">
+box space from outside
+<input type="number" min="0" max="50" step="1" value="1">
+</form> 
+</div>
+
+<div id="linkhoverpart" style="font-size:12px;width:100%;text-align:center;display:none;margin-top:10px;">
+<form id="lafs" action="form_action.asp">
+size text font
+<input type="number" min="0" max="2000" step="1" value="16">
+</form> 
+<form id="laff" action="form_action.asp">
+text font
+<input type="text" value="tahoma">
+</form>  
+<form id="laccc" action="form_action.asp">
+text color
+<input type="color" value="#ff0000">
+</form> 
+<form id="labc" action="form_action.asp">
+Background Color
+<input type="color" value="#ffffff">
+</form> 
+<form id="laac" action="form_action.asp">
+Border color
+<input type="color" value="#000">
+</form> 
+<form id="laam" action="form_action.asp">
+Border style
+<select>
+<option type="checkbox" value="solid">Solid</option>
+<option type="checkbox" value="dashed" selected>Dashed</option>
+<option type="checkbox" value="dotted">Dotted</option>
+<option type="checkbox" value="double">Double</option>
+</select>
+</form> 
+<form id="lacs" action="form_action.asp">
+Border thinkness
+<input type="number" min="0" max="50" step="1" value="1">
+</form> 
+<form id="lacc" action="form_action.asp">
+Border radius
+<input type="number" min="0" max="100" step="1" value="5">
+</form> 
+<form id="lap" action="form_action.asp">
+address Background Photo
+<input type="text" value="">
+</form> 
+<form id="lag" action="form_action.asp">
+Background photo style
+<select>
+<option type="checkbox" value="no-repeat">No Repeat</option>
+<option type="checkbox" value="repeat" selected>Repeat</option>
+</select>
+</form> 
+<form id="lasp" action="form_action.asp">
+Text space from borders
+<input type="number" min="0" max="50" step="1" value="5">
+</form> 
+<form id="lasm" action="form_action.asp">
+box space from outside
+<input type="number" min="0" max="50" step="1" value="1">
+</form> 
+<hr>
+<h5>link setting Menu</h5>
+<form id="mmlafs" action="form_action.asp">
+size text font
+<input type="number" min="0" max="2000" step="1" value="18">
+</form> 
+<form id="mmlaff" action="form_action.asp">
+text font
+<input type="text" value="tahoma">
+</form>  
+<form id="mmlaccc" action="form_action.asp">
+text color
+<input type="color" value="#3399FF">
+</form> 
+<form id="mmlabc" action="form_action.asp">
+Background Color
+<input type="color" value="#ffffff">
+</form> 
+<form id="mmlaac" action="form_action.asp">
+Border color
+<input type="color" value="#000">
+</form> 
+<form id="mmlaam" action="form_action.asp">
+Border style
+<select>
+<option type="checkbox" value="solid">Solid</option>
+<option type="checkbox" value="dashed" selected>Dashed</option>
+<option type="checkbox" value="dotted">Dotted</option>
+<option type="checkbox" value="double">Double</option>
+</select>
+</form> 
+<form id="mmlacs" action="form_action.asp">
+Border thinkness
+<input type="number" min="0" max="50" step="1" value="1">
+</form> 
+<form id="mmlacc" action="form_action.asp">
+Border radius
+<input type="number" min="0" max="100" step="1" value="6">
+</form> 
+<form id="mmlap" action="form_action.asp">
+address Background Photo
+<input type="text" value="">
+</form> 
+<form id="mmlag" action="form_action.asp">
+Background photo style
+<select>
+<option type="checkbox" value="no-repeat">No Repeat</option>
+<option type="checkbox" value="repeat" selected>Repeat</option>
+</select>
+</form> 
+<form id="mmlasp" action="form_action.asp">
+Text space from borders
+<input type="number" min="0" max="50" step="1" value="5">
+</form> 
+<form id="mmlasm" action="form_action.asp">
+box space from outside
+<input type="number" min="0" max="50" step="1" value="1">
+</form> 
+</div>
+
+<div id="headercode" style="font-size:12px;width:100%;text-align:center;display:none;margin-top:10px;">
+<form id="hw" action="form_action.asp">Please enter the numbers followed by px or %<br>
+width header
+<input type="text" value="800px"><br>
+</form> 
+<form id="hh" action="form_action.asp">
+height header
+<input type="text" value="200px"><br>
+</form> 
+<hr>
+<form id="floath" action="form_action.asp">
+Box placement
+<select>
+<option type="checkbox" value="right">right</option>
+<option type="checkbox" value="left">left</option>
+<option type="checkbox" value="center" selected>center</option>
+</select>
+</form> 
+<form id="hp" action="form_action.asp">
+Background Photo header
+<input type="text" value=""><br>
+</form> 
+<form id="hc" action="form_action.asp">
+Background Color header
+<input type="color" value="#cfcfcf">
+</form> 
+<form id="hac" action="form_action.asp">
+Border color
+<input type="color" value="#b6b6b6">
+</form> 
+<form id="ham" action="form_action.asp">
+Border style
+<select>
+<option type="checkbox" value="solid" selected>Solid</option>
+<option type="checkbox" value="dashed">Dashed</option>
+<option type="checkbox" value="dotted">Dotted</option>
+<option type="checkbox" value="double">Double</option>
+</select>
+</form> 
+<form id="has" action="form_action.asp">
+Border thinkness
+<input type="number" min="0" max="50" step="1" value="1">
+</form> 
+<form id="hacy" action="form_action.asp">
+Border radius
+<input type="number" min="0" max="100" step="1" value="1">
+</form>
+<form id="hbp" action="form_action.asp">
+Background photo style
+<select>
+<option type="checkbox" value="no-repeat">No Repeat</option>
+<option type="checkbox" value="repeat" selected>Repeat</option>
+</select>
+</form> 
+<form id="hasp" action="form_action.asp">
+Text space from borders
+<input type="number" min="0" max="2000" step="1" value="1">
+</form> 
+<form id="hamu" action="form_action.asp">
+header space from top
+<input type="number" min="0" max="1000" step="1" value="5">
+</form> 
+<form id="hamd" action="form_action.asp">
+header space from bottom
+<input type="number" min="0" max="1000" step="1" value="10">
+</form> 
+<form id="hfmr" action="form_action.asp">
+header space from right
+<input type="number" min="0" max="1000" step="1" value="1">
+</form> 
+<form id="hfml" action="form_action.asp">
+header space from left
+<input type="number" min="0" max="1000" step="1" value="1">
+</form> 
+<hr>
+<form id="htitle" action="form_action.asp">(If not planning to touch the title, then skip the setting area)<br>
+<select>
+Place title in header?
+<option type="checkbox" value="<-BlogTitle->" selected>Yes</option>
+<option type="checkbox" value=" ">No</option>
+</select>
+</form> 
+<form id="hsubtitle" action="form_action.asp">
+(If not planning to touch the introduction, then skip the setting area)
+<br>
+<select>
+Place introduction in header?
+<option type="checkbox" value="<-BlogDescription->">Yes</option>
+<option type="checkbox" value=" " selected>No</option>
+</select>
+</form> 
+<hr>
+<form id="hts" action="form_action.asp">
+(Website title settings)<br>
+size text font
+<input type="number" min="0" max="2000" step="1" value="20">
+</form> 
+<form id="htf" action="form_action.asp">
+text font
+<input type="text" value="tahoma">
+</form>  
+<form id="htc" action="form_action.asp">
+text color
+<input type="color" value="#000">
+</form> 
+<form id="floatt" action="form_action.asp">Title Placement<select>
+<option type="checkbox" value="right">right</option>
+<option type="checkbox" value="left">left</option>
+<option type="checkbox" value="center" selected>center</option>
+</select>
+</form> 
+
+<form id="httu" action="form_action.asp">
+Space from top
+<input type="number" min="-1000" max="1000" step="1" value="20">
+</form> 
+<form id="httd" action="form_action.asp">
+Space from bottom
+<input type="number" min="-1000" max="1000" step="1" value="1">
+</form> 
+<form id="httr" action="form_action.asp">
+Space from right
+<input type="number" min="-1000" max="1000" step="1" value="1">
+</form> 
+<form id="httl" action="form_action.asp">
+Space from left
+<input type="number" min="-1000" max="1000" step="1" value="1">
+</form> 
+<hr>
+
+<form id="hrs" action="form_action.asp">
+(welcoming section settings)<br>
+size text font
+<input type="number" min="0" max="2000" step="1" value="25">
+</form> 
+<form id="hrf" action="form_action.asp">
+text font
+<input type="text" value="tahoma">
+</form>  
+<form id="hrc" action="form_action.asp">
+text color
+<input type="color" value="#ff0000">
+</form> 
+<form id="floats" action="form_action.asp">
+Welcoming Section Placement
+<select>
+<option type="checkbox" value="right" selected>right</option>
+<option type="checkbox" value="left">left</option>
+<option type="checkbox" value="center">center</option>
+</select>
+</form> 
+
+<form id="hstu" action="form_action.asp">
+Space from top
+<input type="number" min="-1000" max="1000" step="1" value="1">
+</form> 
+<form id="hstd" action="form_action.asp">
+Space from bottom
+<input type="number" min="-1000" max="1000" step="1" value="1">
+</form> 
+<form id="hstr" action="form_action.asp">
+Space from right
+<input type="number" min="-1000" max="1000" step="1" value="1">
+</form> 
+<form id="hstl" action="form_action.asp">
+Space from left
+<input type="number" min="-1000" max="1000" step="1" value="1">
+</form> 
+</div>
+
+<div id="menucode" style="font-size:12px;width:100%;text-align:center;display:none;margin-top:10px;">
+<form id="mw" action="form_action.asp">Please enter the numbers followed by px or %<br>
+width Menu
+<input type="text" value="790px"><br>
+</form> 
+<form id="mh" action="form_action.asp">
+height Menu
+<input type="text" value=""><br>
+</form> 
+<hr>
+<form id="mp" action="form_action.asp">
+Box placement
+<select>
+<option type="checkbox" value="right">right</option>
+<option type="checkbox" value="left">left</option>
+<option type="checkbox" value="center" selected>center</option>
+</select>
+</form> 
+<form id="mi" action="form_action.asp">
+Background Photo Menu
+<input type="text" value=""><br>
+</form> 
+<form id="mc" action="form_action.asp">
+Background Color Menu
+<input type="color" value="#cfcfcf">
+</form> 
+<form id="mac" action="form_action.asp">
+Border color
+<input type="color" value="#b6b6b6">
+</form> 
+<form id="mam" action="form_action.asp">
+Border style
+<select>
+<option type="checkbox" value="solid" selected>Solid</option>
+<option type="checkbox" value="dashed">Dashed</option>
+<option type="checkbox" value="dotted">Dotted</option>
+<option type="checkbox" value="double">Double</option>
+</select>
+</form> 
+<form id="mas" action="form_action.asp">
+Border thinkness
+<input type="number" min="0" max="50" step="1" value="1">
+</form> 
+<form id="macy" action="form_action.asp">
+Border radius
+<input type="number" min="0" max="100" step="1" value="1">
+</form>
+<form id="mbp" action="form_action.asp">
+Background photo style
+<select>
+<option type="checkbox" value="no-repeat">No Repeat</option>
+<option type="checkbox" value="repeat" selected>Repeat</option>
+</select>
+</form> 
+<form id="masp" action="form_action.asp">
+Text space from borders
+<input type="number" min="0" max="2000" step="1" value="5">
+</form> 
+<form id="mamu" action="form_action.asp">
+Menu space from  top
+<input type="number" min="0" max="1000" step="1" value="1">
+</form> 
+<form id="mamd" action="form_action.asp">
+Menu space from bottom
+<input type="number" min="0" max="1000" step="1" value="20">
+</form> 
+<form id="mfmr" action="form_action.asp">
+Menu space from right
+<input type="number" min="0" max="1000" step="1" value="1">
+</form> 
+<form id="mfml" action="form_action.asp">
+Menu space from left
+<input type="number" min="0" max="1000" step="1" value="1">
+</form> 
+<hr>
+Menu Links<br>
+<form id="link1" action="form_action.asp">
+Add Home Page Link?
+<select>
+<option type="checkbox" value="&lt;a href='/'&gt;Home Page&lt;/a&gt;" selected>Yes</option>
+<option type="checkbox" value="">No</option>
+</select>
+</form> 
+<form id="link2" action="form_action.asp">
+Add Profile Link?
+<select>
+<option type="checkbox" value="&lt;a href='/profile/'&gt;Profile&lt;/a&gt;">Yes</option>
+<option type="checkbox" value="" selected>No</option>
+</select>
+</form> 
+<form id="link4" action="form_action.asp">
+Add Archive?
+<select>
+<option type="checkbox" value="&lt;a href='/archive/'&gt;Archive&lt;/a&gt;">Yes</option>
+<option type="checkbox" value="" selected>No</option>
+</select>
+</form> 
+<form id="link5" action="form_action.asp">
+Add Links?
+<select>
+<option type="checkbox" value="&lt;a href='/links/'&gt;Links&lt;/a&gt;">Yes</option>
+<option type="checkbox" value="" selected>No</option>
+</select>
+</form> 
+<form id="link6" action="form_action.asp">
+Add Web Developer Link?
+<select>
+<option type="checkbox" value="&lt;a href='https://kiuloper.com/'&gt;Web Developer&lt;/a&gt;" selected>Yes</option>
+<option type="checkbox" value="">No</option>
+</select>
+</form> 
+</div>
+<div id="postbody" style="font-size:12px;width:100%;text-align:center;display:none;margin-top:10px;">
+<h5>Outter Box</h5>
+<form id="pw" action="form_action.asp">Please enter the numbers followed by px or %<br>
+Box width
+<input type="text" value="600px"><br>
+</form> 
+<hr>
+<form id="pp" action="form_action.asp">
+Box placement
+<select>
+<option type="checkbox" value="right" selected>right</option>
+<option type="checkbox" value="left">left</option>
+<option type="checkbox" value="center">center</option>
+</select>
+</form> 
+<form id="pi" action="form_action.asp">
+Box background
+<input type="text" value=""><br>
+</form> 
+<form id="pc" action="form_action.asp">
+Box background
+<input type="color" value="#cfcfcf">
+</form> 
+<form id="pac" action="form_action.asp">
+Border color
+<input type="color" value="#b6b6b6">
+</form> 
+<form id="pam" action="form_action.asp">
+Border style
+<select>
+<option type="checkbox" value="solid" selected>Solid</option>
+<option type="checkbox" value="dashed">Dashed</option>
+<option type="checkbox" value="dotted">Dotted</option>
+<option type="checkbox" value="double">Double</option>
+</select>
+</form> 
+<form id="pas" action="form_action.asp">
+Border thinkness
+<input type="number" min="0" max="50" step="1" value="1">
+</form> 
+<form id="pacy" action="form_action.asp">
+Border radius
+<input type="number" min="0" max="100" step="1" value="1">
+</form>
+<form id="pbp" action="form_action.asp">
+Background photo style
+<select>
+<option type="checkbox" value="no-repeat">No Repeat</option>
+<option type="checkbox" value="repeat" selected>Repeat</option>
+</select>
+</form> 
+<form id="pasp" action="form_action.asp">
+Text space from borders
+<input type="number" min="0" max="2000" step="1" value="1">
+</form> 
+<form id="pamu" action="form_action.asp">
+Space from top
+<input type="number" min="0" max="1000" step="1" value="1">
+</form> 
+<form id="pamd" action="form_action.asp">
+Space from bottom
+<input type="number" min="0" max="1000" step="1" value="20">
+</form> 
+<form id="pfmr" action="form_action.asp">
+Space from right
+<input type="number" min="0" max="1000" step="1" value="1">
+</form> 
+<form id="pfml" action="form_action.asp">
+Space from left
+<input type="number" min="0" max="1000" step="1" value="1">
+</form> 
+<hr>
+<h5>Inner Box</h5>
+<form id="piw" action="form_action.asp">Please enter the numbers followed by px or %<br>
+Box width
+<input type="text" value="570px"><br>
+</form> 
+<hr>
+<form id="pip" action="form_action.asp">
+Box placement
+<select>
+<option type="checkbox" value="right">right</option>
+<option type="checkbox" value="left">left</option>
+<option type="checkbox" value="center" selected>center</option>
+</select>
+</form> 
+<form id="pii" action="form_action.asp">
+Box background
+<input type="text" value=""><br>
+</form> 
+<form id="pictext" action="form_action.asp">
+Box text color
+<input type="color" value="#000000">
+</form>
+<form id="pic" action="form_action.asp">
+Box background
+<input type="color" value="#ffffff">
+</form> 
+<form id="piac" action="form_action.asp">
+Border color
+<input type="color" value="#cacaca">
+</form> 
+<form id="piam" action="form_action.asp">
+Border style
+<select>
+<option type="checkbox" value="solid" selected>Solid</option>
+<option type="checkbox" value="dashed">Dashed</option>
+<option type="checkbox" value="dotted">Dotted</option>
+<option type="checkbox" value="double">Double</option>
+</select>
+</form> 
+<form id="pias" action="form_action.asp">
+Border thinkness
+<input type="number" min="0" max="50" step="1" value="1">
+</form> 
+<form id="piacy" action="form_action.asp">
+Border radius
+<input type="number" min="0" max="100" step="1" value="5">
+</form>
+<form id="pibp" action="form_action.asp">
+Background photo style
+<select>
+<option type="checkbox" value="no-repeat">No Repeat</option>
+<option type="checkbox" value="repeat" selected>Repeat</option>
+</select>
+</form> 
+<form id="piasp" action="form_action.asp">
+Text space from borders
+<input type="number" min="0" max="2000" step="1" value="5">
+</form> 
+<form id="piamu" action="form_action.asp">
+Space from top
+<input type="number" min="0" max="1000" step="1" value="10">
+</form> 
+<form id="piamd" action="form_action.asp">
+Space from bottom
+<input type="number" min="0" max="1000" step="1" value="10">
+</form> 
+<form id="pifmr" action="form_action.asp">
+Space from right
+<input type="number" min="0" max="1000" step="1" value="1">
+</form> 
+<form id="pifml" action="form_action.asp">
+Space from left
+<input type="number" min="0" max="1000" step="1" value="1">
+</form> 
+</div>
+<div id="soildertbody" style="font-size:12px;width:100%;text-align:center;display:none;margin-top:10px;">
+<h5>Outter Box</h5>
+<form id="sw" action="form_action.asp">Please enter the numbers followed by px or %<br>
+Box width
+<input type="text" value="180px"><br>
+</form> 
+<hr>
+<form id="sp" action="form_action.asp">
+Box placement
+<select>
+<option type="checkbox" value="right">right</option>
+<option type="checkbox" value="left" selected>left</option>
+<option type="checkbox" value="center">center</option>
+</select>
+</form> 
+<form id="si" action="form_action.asp">
+Box background
+<input type="text" value=""><br>
+</form> 
+<form id="sc" action="form_action.asp">
+Box background
+<input type="color" value="#cfcfcf">
+</form> 
+<form id="sac" action="form_action.asp">
+Border color
+<input type="color" value="#b6b6b6">
+</form> 
+<form id="sam" action="form_action.asp">
+Border style
+<select>
+<option type="checkbox" value="solid" selected>Solid</option>
+<option type="checkbox" value="dashed">Dashed</option>
+<option type="checkbox" value="dotted">Dotted</option>
+<option type="checkbox" value="double">Double</option>
+</select>
+</form> 
+<form id="sas" action="form_action.asp">
+Border thinkness
+<input type="number" min="0" max="50" step="1" value="1">
+</form> 
+<form id="sacy" action="form_action.asp">
+Border radius
+<input type="number" min="0" max="100" step="1" value="1">
+</form>
+<form id="sbp" action="form_action.asp">
+Background photo style
+<select>
+<option type="checkbox" value="no-repeat">No Repeat</option>
+<option type="checkbox" value="repeat" selected>Repeat</option>
+</select>
+</form> 
+<form id="sasp" action="form_action.asp">
+Text space from borders
+<input type="number" min="0" max="2000" step="1" value="1">
+</form> 
+<form id="samu" action="form_action.asp">
+Space from top
+<input type="number" min="0" max="1000" step="1" value="1">
+</form> 
+<form id="samd" action="form_action.asp">
+Space from bottom
+<input type="number" min="0" max="1000" step="1" value="20">
+</form> 
+<form id="sfmr" action="form_action.asp">
+Space from right
+<input type="number" min="0" max="1000" step="1" value="1">
+</form> 
+<form id="sfml" action="form_action.asp">
+Space from left
+<input type="number" min="0" max="1000" step="1" value="1">
+</form> 
+<hr>
+<h5>Inner Box</h5>
+<form id="siw" action="form_action.asp">Please enter the numbers followed by px or %<br>
+Box width
+<input type="text" value="160px"><br>
+</form> 
+<hr>
+<form id="sip" action="form_action.asp">
+Box placement
+<select>
+<option type="checkbox" value="right">right</option>
+<option type="checkbox" value="left">left</option>
+<option type="checkbox" value="center" selected>center</option>
+</select>
+</form> 
+<form id="sii" action="form_action.asp">
+Box background
+<input type="text" value=""><br>
+</form> 
+<form id="sictext" action="form_action.asp">
+Box text color
+<input type="color" value="#000000">
+</form>
+<form id="sic" action="form_action.asp">
+Box background
+<input type="color" value="#ffffff">
+</form> 
+<form id="siac" action="form_action.asp">
+Border color
+<input type="color" value="#cacaca">
+</form> 
+<form id="siam" action="form_action.asp">
+Border style
+<select>
+<option type="checkbox" value="solid"  selected>Solid</option>
+<option type="checkbox" value="dashed">Dashed</option>
+<option type="checkbox" value="dotted">Dotted</option>
+<option type="checkbox" value="double">Double</option>
+</select>
+</form> 
+<form id="sias" action="form_action.asp">
+Border thinkness
+<input type="number" min="0" max="50" step="1" value="1">
+</form> 
+<form id="siacy" action="form_action.asp">
+Border radius
+<input type="number" min="0" max="100" step="1" value="3">
+</form>
+<form id="sibp" action="form_action.asp">
+Background photo style
+<select>
+<option type="checkbox" value="no-repeat">No Repeat</option>
+<option type="checkbox" value="repeat" selected>Repeat</option>
+</select>
+</form> 
+<form id="siasp" action="form_action.asp">
+Text space from borders
+<input type="number" min="0" max="2000" step="1" value="5">
+</form> 
+<form id="siamu" action="form_action.asp">
+Space from top
+<input type="number" min="0" max="1000" step="1" value="5">
+</form> 
+<form id="siamd" action="form_action.asp">
+Space from bottom
+<input type="number" min="0" max="1000" step="1" value="5">
+</form> 
+<form id="sifmr" action="form_action.asp">
+Space from right
+<input type="number" min="0" max="1000" step="1" value="1">
+</form> 
+<form id="sifml" action="form_action.asp">
+Space from left
+<input type="number" min="0" max="1000" step="1" value="1">
+</form> </div>
+<div id="titlebody" style="font-size:12px;width:100%;text-align:center;display:none;margin-top:10px;">
+<h5>blog title setting</h5>
+<form id="ptw" action="form_action.asp">
+Please place px or % after the numbers
+<br>
+Box width
+<input type="text" value="560px"><br>
+</form> 
+
+
+<form id="pth" action="form_action.asp">
+box height
+<input type="text" value=""><br>
+</form> 
+<hr>
+
+<form id="ptp" action="form_action.asp">
+Box placement
+<select>
+<option type="checkbox" value="right">right</option>
+<option type="checkbox" value="left">left</option>
+<option type="checkbox" value="center" selected>center</option>
+</select>
+</form> 
+
+
+<form id="pti" action="form_action.asp">
+Box background
+<input type="text" value=""><br>
+</form> 
+
+<form id="ptctext" action="form_action.asp">
+Box text color
+<input type="color" value="#000000">
+</form>
+
+
+<form id="ptc" action="form_action.asp">
+Box background
+<input type="color" value="#f8f8f8">
+</form> 
+
+
+<form id="ptac" action="form_action.asp">
+Border color
+<input type="color" value="#cacaca">
+</form> 
+
+
+<form id="ptam" action="form_action.asp">
+Border style
+<select>
+<option type="checkbox" value="solid" selected>Solid</option>
+<option type="checkbox" value="dashed">Dashed</option>
+<option type="checkbox" value="dotted">Dotted</option>
+<option type="checkbox" value="double">Double</option>
+</select>
+</form> 
+
+
+<form id="ptas" action="form_action.asp">
+Border thinkness
+<input type="number" min="0" max="50" step="1" value="1">
+</form> 
+
+
+<form id="ptacy" action="form_action.asp">
+Border radius
+<input type="number" min="0" max="100" step="1" value="5">
+</form>
+
+
+<form id="ptbp" action="form_action.asp">
+Background photo style
+<select>
+<option type="checkbox" value="no-repeat">No Repeat</option>
+<option type="checkbox" value="repeat" selected>Repeat</option>
+</select>
+</form> 
+
+
+<form id="ptasp" action="form_action.asp">
+Text space from borders
+<input type="number" min="0" max="2000" step="1" value="5">
+</form> 
+
+
+<form id="ptamu" action="form_action.asp">
+Space from top
+<input type="number" min="0" max="1000" step="1" value="5">
+</form> 
+
+
+<form id="ptamd" action="form_action.asp">
+Space from bottom
+<input type="number" min="0" max="1000" step="1" value="5">
+</form> 
+
+
+<form id="ptfmr" action="form_action.asp">
+Space from right
+<input type="number" min="0" max="1000" step="1" value="1">
+</form> 
+
+
+<form id="ptfml" action="form_action.asp">
+Space from left
+<input type="number" min="0" max="1000" step="1" value="1">
+</form>
+<hr>
+<h5>Title Setting</h5>
+<form id="stw" action="form_action.asp">
+Please place px or % after the numbers
+<br>
+box width
+<input type="text" value="140px"><br>
+</form> 
+
+
+<form id="sth" action="form_action.asp">
+box height
+<input type="text" value=""><br>
+</form> 
+<hr>
+
+
+<form id="stp" action="form_action.asp">
+box placement
+<select>
+<option type="checkbox" value="right">right</option>
+<option type="checkbox" value="left">left</option>
+<option type="checkbox" value="center" selected>center</option>
+</select>
+</form> 
+
+
+<form id="sti" action="form_action.asp">
+box backgorund image
+<input type="text" value=""><br>
+</form> 
+
+
+<form id="stctext" action="form_action.asp">
+box text color
+<input type="color" value="#000000">
+</form>
+
+
+<form id="stc" action="form_action.asp">
+box color
+<input type="color" value="#f8f8f8">
+</form> 
+
+
+<form id="stac" action="form_action.asp">
+border color
+<input type="color" value="#cacaca">
+</form> 
+
+
+<form id="stam" action="form_action.asp">
+ border style
+<select>
+<option type="checkbox" value="solid" selected>solid</option>
+<option type="checkbox" value="dashed">dashed</option>
+<option type="checkbox" value="dotted">dotted</option>
+<option type="checkbox" value="double">double</option>
+</select>
+</form> 
+
+
+<form id="stas" action="form_action.asp">
+border thinkness
+<input type="number" min="0" max="50" step="1" value="1">
+</form> 
+
+
+<form id="stacy" action="form_action.asp">
+Border radius
+<input type="number" min="0" max="100" step="1" value="3">
+</form>
+
+
+<form id="stbp" action="form_action.asp">
+Background photo style
+<select>
+<option type="checkbox" value="no-repeat">No repeat</option>
+<option type="checkbox" value="repeat" selected>Repeat</option>
+</select>
+</form> 
+
+
+<form id="stasp" action="form_action.asp">
+Text space from corners
+<input type="number" min="0" max="2000" step="1" value="5">
+</form> 
+
+
+<form id="stamu" action="form_action.asp">
+Space from top
+<input type="number" min="0" max="1000" step="1" value="5">
+</form> 
+
+
+<form id="stamd" action="form_action.asp">
+Space from bottom
+<input type="number" min="0" max="1000" step="1" value="5">
+</form> 
+
+
+<form id="stfmr" action="form_action.asp">
+Space from right
+<input type="number" min="0" max="1000" step="1" value="1">
+</form> 
+
+
+<form id="stfml" action="form_action.asp">
+Space from left
+<input type="number" min="0" max="1000" step="1" value="1">
+</form>
+</div>
+
+<div id="info1" style="font-size:12px;width:100%;text-align:center;display:none;margin-top:10px;">
+<form id="part1" action="form_action.asp">
+Add about us?
+<select>
+<option type="checkbox" value="<BlogProfile><div class='soilderbody'><div class='soiltitle'>About Us</div><div style='padding-bottom:7px;text-align:center'><BlogPhoto><img src='<-BlogPhotoLink->'></BlogPhoto></div><-BlogAbout-></div></BlogProfile>" selected>Yes</option>
+<option type="checkbox" value="">No</option>
+</select>
+</form> 
+
+<form id="part2" action="form_action.asp">
+Add dump link section?
+<select>
+<option type="checkbox" value="<BlogLinkDumpBlock><div class='soilderbody' dir='rtl'><div class='soiltitle'>Dump Link</div><BlogLinkDump><a target='_blank' href='<-LinkUrl->' title='<-LinkDescription->'><-LinkTitle-></a><br></BlogLinkDump></div></BlogLinkDumpBlock>">Yes</option>
+<option type="checkbox" value="" selected>No</option>
+</select>
+</form> 
+
+<form id="part3" action="form_action.asp">
+Add Archive section?
+<select>
+<option type="checkbox" value="<div class='soilderbody' dir='rtl'><div class='soiltitle'>آArchive</div><BlogArchive><a href='<-ArchiveLink->' target='_blank'><-ArchiveTitle-></a><br></BlogArchive></div>" selected>Yes</option>
+<option type="checkbox" value="">No</option>
+</select>
+</form> 
+
+<form id="part4" action="form_action.asp">
+Add categories section?
+<select>
+<option type="checkbox" value="<BlogCategoriesBlock><div class='soilderbody' dir='rtl'><div class='soiltitle'>Categories</div><BlogCategories><a target='_blank' href='<-CategoryLink->'><-CategoryName-></a><br></BlogCategories></div></BlogCategoriesBlock>">Yes</option>
+<option type="checkbox" value="" selected>No</option>
+</select>
+</form> 
+
+<form id="part5" action="form_action.asp">
+Add links section?
+<select>
+<option type="checkbox" value="<div class='soilderbody' dir='rtl'><div class='soiltitle'>Links</div><BlogLinks><a href='<-LinkUrl->' target='_blank'><-LinkTitle-></a><br></BlogLinks></div>" selected>Yes</option>
+<option type="checkbox" value="">No</option>
+</select>
+</form> 
+
+<form id="part6" action="form_action.asp">
+Add tags section?
+<select>
+<option type="checkbox" value="<BlogTagsBlock><div class='soilderbody' dir='rtl'><div class='soiltitle'>Tags</div><BlogTags><a target='_blank' href='<-TagLink->'><-TagName-></a><br></BlogTags></div></BlogTagsBlock>">Yes</option>
+<option type="checkbox" value="" selected>No</option>
+</select>
+</form> 
+
+<form id="part7" action="form_action.asp">
+Do you want other settings section?
+<select>
+<option type="checkbox" value="<div class='soilderbody' dir='rtl'><div class='soiltitle'>Other Settings</div><-BlogCustomHtml-></div>">Yes</option>
+<option type="checkbox" value="" selected>No</option>
+</select>
+</form> 
+
+<form id="part8" action="form_action.asp">
+Page penegration?
+<select>
+<option type="checkbox" value="<BlogNextAndPreviousBlock><div class='soilderbody' dir='rtl'><div class='soiltitle'>Other Pages</div><BlogPreviousPageBlock><a href='<-BlogPreviousPageLink->'>New Posts</a><br></BlogPreviousPageBlock><BlogNextPageBlock><a href='<-BlogNextPageLink->'>Old Posts</a></BlogNextPageBlock></div></BlogNextAndPreviousBlock>">Yes</option>
+<option type="checkbox" value="" selected>No</option>
+</select>
+</form> 
+</div>
+
+<div id="botttompart" style="font-size:12px;width:100%;text-align:center;display:none;margin-top:10px;">
+<form id="btw" action="form_action.asp">
+Please enter the numbers followed by px or %<br>
+Box width
+<input type="text" value="560px"><br>
+</form> 
+
+
+<form id="bth" action="form_action.asp">
+Box length
+<input type="text" value=""><br>
+</form> 
+<hr>
+
+<form id="btp" action="form_action.asp">
+Box placement
+<select>
+<option type="checkbox" value="right">Right</option>
+<option type="checkbox" value="left">Left</option>
+<option type="checkbox" value="center" selected>Center</option>
+</select>
+</form> 
+
+
+<form id="bti" action="form_action.asp">
+Box background
+<input type="text" value=""><br>
+</form> 
+
+<form id="btctext" action="form_action.asp">
+Box text color
+<input type="color" value="#fff">
+</form>
+
+
+<form id="btc" action="form_action.asp">
+Box background
+<input type="color" value="#b5b5b5">
+</form> 
+
+
+<form id="btac" action="form_action.asp">
+Border color
+<input type="color" value="#959595">
+</form> 
+
+
+<form id="btam" action="form_action.asp">
+Border style
+<select>
+<option type="checkbox" value="solid" selected>Solid</option>
+<option type="checkbox" value="dashed">Dashed</option>
+<option type="checkbox" value="dotted">Dotted</option>
+<option type="checkbox" value="double">Double</option>
+</select>
+</form> 
+
+
+<form id="btas" action="form_action.asp">
+Border thinkness
+<input type="number" min="0" max="50" step="1" value="1">
+</form> 
+
+
+<form id="btacy" action="form_action.asp">
+Border radius
+<input type="number" min="0" max="100" step="1" value="1">
+</form>
+
+
+<form id="btbp" action="form_action.asp">
+Background photo style
+<select>
+<option type="checkbox" value="no-repeat">No Repeat</option>
+<option type="checkbox" value="repeat" selected>Repeat</option>
+</select>
+</form> 
+
+
+<form id="btasp" action="form_action.asp">
+Text space from borders
+<input type="number" min="0" max="2000" step="1" value="5">
+</form> 
+
+
+<form id="btamu" action="form_action.asp">
+Space from top
+<input type="number" min="0" max="1000" step="1" value="5">
+</form> 
+
+
+<form id="btamd" action="form_action.asp">
+Space from bottom
+<input type="number" min="0" max="1000" step="1" value="5">
+</form> 
+
+
+<form id="btfmr" action="form_action.asp">
+Space from right
+<input type="number" min="0" max="1000" step="1" value="1">
+</form> 
+
+
+<form id="btfml" action="form_action.asp">
+Space from left
+<input type="number" min="0" max="1000" step="1" value="1">
+</form>
+
+</div>
+
+<div id="getcode" style="font-size:12px;width:100%;text-align:center;display:none;margin-top:10px;">
+Please copy the following codes and paste them into the template builder<br>
+<textarea cols="100" rows="20" id="getit"></textarea>
+<textarea cols="100" rows="20"><script  language="javascript">
+  function GetBC(lngPostid)
+   {
+       intTimeZone=<-BlogTimeZone->;
+       strBlogId="<-BlogId->";
+       intCount=-1;
+       strResult="";
+       try {
+	  for (i=0;i<BlogComments.length;i+=2)
+	  {
+	       if (BlogComments[i]==lngPostid)
+	       intCount=BlogComments[i+1] ;
+	  }
+           }  catch( e) {
+           }
+    if ( intCount==-1)  strResult=" Comments ";
+    if ( intCount==0)  strResult=" Send Comment ";
+    if ( intCount==1)  strResult=" Comments ";
+    if ( intCount>1)  strResult=intCount + " Comments " ;
+  
+  strUrl="/comments/?blogid=" +strBlogId + "&postid=" + lngPostid + "&timezone=" + intTimeZone ;
+  strResult ="<a href=\"javascript:void(0)\" onclick=\"javascript:window.open('" + strUrl + "','blogfa_comments','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px')\" >" +  strResult + " </a>" ;
+
+  document.write ( strResult ) ;
+ }
+ 
+ function OpenLD()
+{
+  window.open('/links','blogfa_ld','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px');
+  return true;
+}
+
+
+</script>
+<div class="post"><BLOGFA><div class="postbody"><div class="posttitle" dir="rtl"><-PostTitle-></div><p dir="rtl"><-PostContent-><BlogPostTagsBlock><br>tags : <BlogPostTags separator=", "><a href="<-TagLink->"><-TagName-></a></BlogPostTags></BlogPostTagsBlock></p><div class="postbot"><BlogExtendedPost><a href="<-PostLink->"> Read More </a></BlogExtendedPost> <-PostDate->.<-PostTime->.<-PostAuthor-> <BlogComment><span dir="rtl" style="float:left;margin-left:50px;" ><script type="text/javascript">GetBC(<-PostId->)</script></span></BlogComment></div></div></BLOGFA></div></div><div class="botpart"><a target="_blank" href="https://kiuloper.com/">kiuloper</a></div></html></textarea>
+</div>
+
+</div>
+<b style="float:left;" onclick="myFunction()"><img src="show.png" >
+</b>
+<b id="flip" style="float:right;"><img src="control.png" ></b>
+
+<p id="demo"></p>
+<script src="java.js"></script>
+
+</body>
+</html>
